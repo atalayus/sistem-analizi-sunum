@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+.tanıt,
+.fizibilite,
+.matris {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    width: 80%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.amac,
+.calisma,
+.roller,
+.teknik,
+.ekonomik,
+.zaman,
+.sosyal,
+.yasal {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.roller ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+.fizibilite img {
+    width: 100%;
+    /* Resmin genişliğini, konteynerin genişliğiyle uyumlu yapar */
+    max-width: 100%;
+    /* Resmin genişliğini sınırlayarak taşmasını engeller */
+    height: auto;
+    /* Resmin oranlarını koruyarak yüksekliği otomatik ayarlar */
+    border-radius: 10px;
+    /* Kenarlarını yuvarlatabiliriz */
+    object-fit: contain;
+    /* Resmin orantılı olarak yerleştirilmesini sağlar */
+}
+
+
+
+/* Başlıklar */
+h1 {
+    font-size: 3rem; /* Büyük başlık */
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.2rem; /* H2 başlıkları büyütüldü */
+
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.8rem; /* H3 başlıkları büyütüldü */
+
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 1.6rem; /* H4 başlıkları büyütüldü */
+
+}
+
+/* Paragraflar */
+p {
+    font-size: 1.4rem; /* Paragraflar büyütüldü */
+    line-height: 1.6;
+}
+
+/* Listeler */
+ul {
+    font-size: 1.4rem;
+    margin-left: 20px;
+}

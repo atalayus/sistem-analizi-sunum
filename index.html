@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araç Takip Sistemi Projesi Sunumu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Araç Takip Sistemi Projesi Sunumu</h1>
+
+    </header>
+
+    <div class="tanıt">
+        <div class="amac">
+            <h2>Projemizin Amacı</h2>
+            <p>Günümüzde taksi çağırma taleplerinin artmasıyla birlikte, taksi şirketleri telefonla gelen çağrılara
+                yetişmekte zorlanmaktadır. Bu nedenle, yolcuların kendi yakınlarında bulunan taksileri harita üzerinden
+                görüntüleyebileceği, kolayca taksi çağırabileceği ve çağırdığı taksiyi anlık olarak haritada takip
+                edebileceği bir sistem geliştirmemiz talep edilmiştir.</p>
+        </div>
+        <div class="calisma">
+            <h2>Sistemimizin Çalışma Prensibi</h2>
+            <p>Bu sistem, kullanıcıların konumlarını paylaşarak en yakın taksileri görebilmelerine dayanır. Uygulama
+                üzerinden taksi çağırma işlemi yapıldığında, en uygun taksiye yolcunun bilgisi iletilir ve yolcu,
+                taksinin kendisine yaklaşmasını harita üzerinden gerçek zamanlı olarak takip edebilir.</p>
+        </div>
+        <div class="roller">
+            <h2>Sistemimizde Bulunan Roller</h2>
+            <h3>Yolcu</h3>
+            <p>Uygulamayı kullanarak çevresindeki taksileri görebilir, taksi çağırabilir ve taksinin geliş sürecini
+                takip edebilir.</p>
+            <h3>Şoför</h3>
+            <p> Sistemde aktif hale gelerek konumunu paylaşır ve yolculardan gelen çağrıları alabilir. Bir yolcu
+                taksi çağırdığında, en uygun şoföre bildirim gönderilir. Şoför çağrıyı kabul ederse, yolcunun konumu ve
+                varış noktası şoföre iletilir.</p>
+            <h4>Şoför Durumları</h4>
+            <ul>
+                <li>Müsait: Şoför sistemde aktif ve yolcu çağrısı alabilir.</li>
+                <li>Meşgul: Şoför bir yolcu aldı ve yeni çağrıları kabul edemez.</li>
+                <li>Çevrimdışı: Şoför sistemde değil ve çağrı alamaz.</li>
+            </ul>
+            <h3>Admin</h3>
+            <p>Sistemin genel yönetimini yaparak, aktif olan taksileri ve yolcuların işlemlerini denetler.</p>
+        </div>
+
+    </div>
+
+    <div class="fizibilite">
+        <div class="teknik">
+            <h2>Teknik fizibilite</h2>
+            <p>Frontend olarak Flutter, backend olarak Firebase kullanılacaktır.Sistemimiz iOS ve Android cihazlarda
+                sorunsuz çalışacaktır. </p>
+            <p>Cloud Firestore, büyük ölçekli projelerde iyi performans sağladığından tercih
+                edilecek, ancak sorgu bazlı ücretlendirme nedeniyle veri yapıları dikkatli tasarlanmalıdır.</p>
+            <p>Kullanıcı kimlik doğrulama işlemleri Firebase Authentication ile sağlanacaktır. Yetkilendirme için Custom
+                Claims ve Firestore Security Rules kullanılacak, böylece her kullanıcı yalnızca kendi yetkisi
+                dahilindeki verilere erişebilecektir.</p>
+            <p>Gerçek zamanlı konum takibi için Google Maps API kullanılacaktır. Konum güncellemeleri belirli
+                aralıklarla yapılacak ve gereksiz veri akışı önlenerek sistemin performansı optimize edilecektir.</p>
+        </div>
+        <div class="ekonomik">
+            <h2>Ekonomik Fizbilite</h2>
+            <h3>Giderler</h3>
+            <ul>
+                <li>Firebase Ücretleri (Blaze Plan) : 500 TL</li>
+                <li>Google Maps API Kullanımı : 450 TL</li>
+                <li>Alan Adı ve Hosting : 200 TL</li>
+                <li>Sunucu (Opsiyonel) : 500 TL</li>
+                <li>Geliştirici Maaşı : 50.000 TL</li>
+                <li>Toplam Gider 51.650 TL</li>
+            </ul>
+            <h3>Başa Baş Grafiği</h3>
+            <img src="assets/başa baş2.png" alt="başaBaşGrafiği">
+        </div>
+        <div class="zaman">
+            <h2>Zaman Fizibilitesi</h2>
+            <img src="assets/gant şeması.png" alt="gantŞeması">
+        </div>
+        <div class="sosyal">
+            <h2>Sosyal Fizibilite</h2>
+            <p>Sistem, kullanıcıların güvenli ve hızlı bir şekilde yolculuk yapmasını sağlayarak şehir içi ulaşımı
+                kolaylaştıracaktır. Yolcular, en yakın şoförleri harita üzerinden görerek taksi çağırabilecek, böylece
+                bekleme süresi azalacaktır. Şoförler için de müşteri bulma sürecini hızlandırarak gelirlerini
+                artıracaktır. Ancak, toplumun bu sisteme adaptasyonu için tanıtım ve bilinçlendirme çalışmaları
+                yapılması gerekmektedir. Kullanıcı güvenini sağlamak için yolcu ve şoför değerlendirme sistemi
+                eklenmelidir.
+            </p>
+        </div>
+        <div class="yasal">
+            <h2>Yasal Fizibilite</h2>
+            <p>Sistemin yasal çerçevede faaliyet gösterebilmesi için ilgili ulaşım ve taşımacılık mevzuatlarına uygun
+                olması gerekmektedir. Taksicilik hizmeti veren şoförlerin gerekli ruhsat ve belgelerinin doğrulanması
+                için bir doğrulama süreci uygulanmalıdır. Kişisel verilerin korunması adına KVKK (Kişisel Verileri
+                Koruma Kanunu) ve GDPR gibi yasal düzenlemelere uyum sağlanmalı, kullanıcı verileri yalnızca
+                yetkilendirilmiş kişiler tarafından erişilebilir olmalıdır. Ayrıca, sistem üzerinden yapılan ödemelerde
+                vergi yükümlülükleri dikkate alınarak fatura düzenlenmesi sağlanmalıdır. Kullanıcının konum bilgilerine
+                erişim ve paylaşımı için gerekli izinler alınacak, bu süreç açık rıza ilkesi doğrultusunda
+                yürütülecektir.
+            </p>
+        </div>
+    </div>
+
+    <div class="matris">
+        <h2>Fizibilite Matrisi</h2>
+        <table border="1">
+            <tr align="center">
+                <th></th>
+                <th>Birinci Sistem</th>
+                <th>İkinci Sistem</th>
+            </tr>
+            <tr align="center">
+                <td>Teknik Fizibilite</td>
+                <td>frontend Flutter, backend Firebase - 9</td>
+                <td>frontend Flutter, backend Node.js - 5</td>
+            </tr>
+            <tr align="center">
+                <td>Ekonomik Fizibilite</td>
+                <td>Küçük projelerde ücretsiz ancak yüksek kullanımda maliyetli olabilir. - 7</td>
+                <td>Sunucu, eğitim ve geliştirme maliyetleri daha yüksek. - 5</td>
+            </tr>
+            <tr align="center">
+                <td>Zaman Fizibilitesi</td>
+                <td>Hızlı geliştirme süreci, hazır çözümler var. - 9</td>
+                <td>Eğitim süresi uzun, altyapı oluşturma zaman alır. - 5</td>
+            </tr>
+            <tr align="center">
+                <td>Operasyonel Fizibilite</td>
+                <td>Kullanıcı dostu, yönetimi kolay. - 9</td>
+                <td>Yönetim için ek beceri gerektirir. - 6</td>
+            </tr>
+            <tr align="center">
+                <td>Genel Puan</td>
+                <td>33</td>
+                <td>22</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
